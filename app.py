@@ -25,8 +25,8 @@ cuisine = st.selectbox("Choose your favourite!",['Healthy Food', 'Snack', 'Desse
 st.subheader("How well do you want the dish to be?")  #RATING
 val = st.slider("from poor to the best!",0,10)
 
-food = pd.read_csv("input/food.csv")
-ratings = pd.read_csv("input/ratings.csv")
+food = pd.read_csv("food.csv")
+ratings = pd.read_csv("ratings.csv")
 combined = pd.merge(ratings, food, on='Food_ID')
 #ans = food.loc[(food.C_Type == cuisine) & (food.Veg_Non == vegn),['Name','C_Type','Veg_Non']]
 
